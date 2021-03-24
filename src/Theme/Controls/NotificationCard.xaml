@@ -1,29 +1,38 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
   <Design.PreviewWith>
-    <Border Padding="0" Background="White">
-      <NotificationCard Content="Testing" />
+    <Border Padding="50" Background="{DynamicResource WindowColor}">
+      <StackPanel Spacing="10">
+        <NotificationCard Content="Testing" />
+      </StackPanel>
     </Border>
   </Design.PreviewWith>
+  
   <Style Selector="NotificationCard">
     <Setter Property="UseLayoutRounding" Value="True"/>
     <Setter Property="Width" Value="350"/>
-    <Setter Property="FontSize" Value="14"/>
-    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="FontSize" Value="{DynamicResource Title2FontSize}"/>
+    <Setter Property="Foreground" Value="{DynamicResource SystemTitleTextBrush}"/>
     <Setter Property="RenderTransformOrigin" Value="50%,75%"/>
     <Setter Property="BorderThickness" Value="0" />
-    <Setter Property="Background" Value="{DynamicResource NotificationCardBackgroundBrush}" />    
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />    
     <Setter Property="Template">
       <ControlTemplate>
-        <LayoutTransformControl Name="PART_LayoutTransformControl" UseRenderTransform="True">
-          <Border CornerRadius="{DynamicResource ControlCornerRadius}" BoxShadow="0 6 8 0 #4F000000" Margin="5 5 5 10">
+        <LayoutTransformControl Name="PART_LayoutTransformControl" 
+                                UseRenderTransform="True">
+          <Border CornerRadius="{DynamicResource ControlCornerRadius}" 
+                  BoxShadow="0 6 8 0 #4F000000" 
+                  Margin="5 5 5 10">
             <Border Background="{TemplateBinding Background}"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
                     CornerRadius="{DynamicResource ControlCornerRadius}" ClipToBounds="True">
               <DockPanel>
                 <Panel x:Name="PART_HeaderBar" Height="4" DockPanel.Dock="Top" />
-                <ContentControl Name="PART_Content" Content="{TemplateBinding Content}" />
+                <ContentControl Name="PART_Content" 
+                                Margin="10"
+                                Content="{TemplateBinding Content}" />
               </DockPanel>
             </Border>
           </Border>
@@ -87,18 +96,18 @@
   </Style>
 
   <Style Selector="NotificationCard /template/ Panel#PART_HeaderBar">
-    <Setter Property="Background" Value="{DynamicResource NotificationCardProgressBackgroundBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemBlueColor}"/>
   </Style>
   <Style Selector="NotificationCard:information /template/ Panel#PART_HeaderBar">
-    <Setter Property="Background" Value="{DynamicResource NotificationCardInformationBackgroundBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemTealColor}"/>
   </Style>
   <Style Selector="NotificationCard:success /template/ Panel#PART_HeaderBar">
-    <Setter Property="Background" Value="{DynamicResource NotificationCardSuccessBackgroundBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemGreenColor}"/>
   </Style>
   <Style Selector="NotificationCard:warning /template/ Panel#PART_HeaderBar">
-    <Setter Property="Background" Value="{DynamicResource NotificationCardWarningBackgroundBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemOrangeColor}"/>
   </Style>
   <Style Selector="NotificationCard:error /template/ Panel#PART_HeaderBar">
-    <Setter Property="Background" Value="{DynamicResource NotificationCardErrorBackgroundBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemRedColor}"/>
   </Style>
 </Styles>
