@@ -1,0 +1,15 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:SampleApp"
+             xmlns:at="using:Aldwych.Theme"
+             x:Class="SampleApp.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <at:AldwychTheme  Mode="Dark"/>
+        <StyleInclude Source="avares://SampleApp/IconsGeometry.axaml" />
+
+    </Application.Styles>
+</Application>

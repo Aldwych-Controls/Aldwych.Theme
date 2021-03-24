@@ -1,0 +1,143 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SampleApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="650"
+        Width="1000"
+        Height="600"
+        x:Class="SampleApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="SampleApp">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+  <TabControl>
+    <TabItem Header="Inputs">
+
+      <Grid RowDefinitions="Auto,Auto, Auto" >
+        
+        <StackPanel Orientation="Horizontal" Spacing="5" Margin="20">
+          <Button Content="Default" IsDefault="True" Command="{Binding FakeCommand}"/>
+          <Button Content="Cancel" IsCancel="True" Command="{Binding FakeCommand}" />
+          <Button Content="Normal" Command="{Binding FakeCommand}"/>
+          <Button Content="Disabled" IsEnabled="False" Command="{Binding FakeCommand}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Spacing="5" Grid.Row="1" Margin="20">
+          <ComboBox SelectedIndex="0">
+            <ComboBoxItem Content="Item 1"/>
+            <ComboBoxItem Content="Item 2"/>
+            <ComboBoxItem Content="Item 3"/>
+            <ComboBoxItem Content="Item 4"/>
+            <ComboBoxItem Content="Item 5"/>
+          </ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Spacing="5" Grid.Row="2" Margin="20">
+          <Expander Header="Test">
+            <Border  Background="Transparent" Height="50" Width="200"/>
+          </Expander>
+
+          <Expander Header="Test" IsExpanded="True">
+            <Border  Background="Red" Height="50" Width="200"/>
+          </Expander>
+        </StackPanel>
+      </Grid>
+
+
+    </TabItem>
+
+    
+    <TabItem Header="Text">
+
+      <StackPanel Orientation="Horizontal" Spacing="5">
+        <Button Content="Default" IsDefault="True" Command="{Binding FakeCommand}"/>
+        <Button Content="Cancel" IsCancel="True" Command="{Binding FakeCommand}" />
+        <Button Content="Normal" Command="{Binding FakeCommand}"/>
+        <Button Content="Disabled" IsEnabled="False" Command="{Binding FakeCommand}"/>
+      </StackPanel>
+
+    </TabItem>
+
+    <TabControl.ContextMenu>
+      <ContextMenu>
+        <MenuItem Header="File" InputGesture="Ctrl+F">
+          <MenuItem.Icon>
+            <Path Data="{DynamicResource ZoomInLineIcon}"
+                  Fill="{DynamicResource SystemIconBrush}"
+                  VerticalAlignment="Center"
+                  Margin="0,2,-5,0"
+                  Stretch="Uniform"
+                  Width="18"/>
+          </MenuItem.Icon>
+          
+          <MenuItem Header="Test 1">
+            <MenuItem.Icon>
+              <Path Data="{DynamicResource ZoomInLineIcon}"
+                    Fill="White"
+                    Stretch="Uniform"
+                    Width="8"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <MenuItem Header="Disabled"
+                    IsEnabled="False" />
+          <MenuItem Header="New"
+                    InputGesture="Ctrl+N">
+            <MenuItem Header="XML" />
+          </MenuItem>
+          <MenuItem Header="Open">
+            <MenuItem.Icon>
+              <CheckBox BorderThickness="0"
+                        IsHitTestVisible="False"
+                        IsChecked="True" />
+            </MenuItem.Icon>
+          </MenuItem>
+          <Separator />
+          <MenuItem Header="Exit"
+                    InputGesture="Alt+F4" />
+        </MenuItem>
+        <MenuItem Header="Edit">
+          <MenuItem.Icon>
+            <Path Data="{DynamicResource ClearLineIcon}"
+                  Fill="{DynamicResource SystemIconBrush}"
+                  VerticalAlignment="Center"
+                  Margin="0,2,-5,0"
+                  Stretch="Uniform"
+                  Width="18"/>
+          </MenuItem.Icon>
+          <MenuItem Header="Go To">
+            <MenuItem.Icon>
+              <Path Data="{DynamicResource InfoLineIcon}"
+                    Fill="{DynamicResource SystemIconBrush}"
+                    VerticalAlignment="Center"
+                    Margin="0,2,-5,0"
+                    Stretch="Uniform"
+                    Width="18"/>
+            </MenuItem.Icon>
+            <MenuItem Header="Go To Line" />
+          </MenuItem>
+        </MenuItem>
+        <MenuItem Header="View">
+          <MenuItem.Icon>
+            <Path Data="{DynamicResource ToolbarOpenPanelLineIcon}"
+                  Fill="{DynamicResource SystemIconBrush}"
+                  VerticalAlignment="Center"
+                  Margin="0,2,-5,0"
+                  Stretch="Uniform"
+                  Width="18"/>
+          </MenuItem.Icon>
+          <MenuItem Header="Designer"
+                    InputGesture="Shift+F7" />
+        </MenuItem>
+        <MenuItem Header="Project">
+          <MenuItem Header="Add class" />
+        </MenuItem>
+
+      </ContextMenu>
+    </TabControl.ContextMenu>
+  </TabControl>
+  
+</Window>

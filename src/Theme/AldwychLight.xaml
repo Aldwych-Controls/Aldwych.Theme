@@ -1,0 +1,9 @@
+<Styles xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:sys="clr-namespace:System;assembly=netstandard">
+  <StyleInclude Source="avares://Aldwych.Theme/Accents/BaseLight.xaml" />
+  <StyleInclude Source="avares://Aldwych.Theme/Accents/Base.xaml" />  
+  <StyleInclude Source="avares://Aldwych.Theme/Accents/AldwychBaseLight.xaml" />
+  <StyleInclude Source="avares://Aldwych.Theme/Accents/AldwychControlResourcesLight.xaml" />
+  <StyleInclude Source="avares://Aldwych.Theme/Controls/AldwychControls.xaml" />
+</Styles>
