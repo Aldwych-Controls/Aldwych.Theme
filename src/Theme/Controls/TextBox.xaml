@@ -1,11 +1,17 @@
 <Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
-    <Border Padding="20">
-      <TextBox Text="Sample"
-               FontSize="20"
-               Width="100"
-               Classes="clearButton"
-               TextAlignment="Center"/>
+    <Border Padding="20" Width="500" Height="500">
+      <StackPanel Spacing="25">
+        <TextBox Text="Sample"
+           Width="300"
+           Classes="clearButton"
+           TextAlignment="Left"/>
+        <TextBox Watermark="Sample test"
+           Width="300"
+           Classes="clearButton"
+           TextAlignment="Left"/>
+        
+      </StackPanel>
     </Border>
   </Design.PreviewWith>
   
@@ -23,17 +29,18 @@
 
   <Style Selector="TextBox">
     <Setter Property="Foreground" Value="{DynamicResource TextControlForeground}" />
-    <Setter Property="Background" Value="{DynamicResource TextControlBackground}" />
-    <Setter Property="CaretBrush" Value="{DynamicResource TextControlForeground}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrush}" />
-    <Setter Property="SelectionBrush" Value="{DynamicResource TextControlSelectionHighlightColor}" />
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
+    <Setter Property="CaretBrush" Value="{DynamicResource SystemIconColor}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerBrush}" />
+    <Setter Property="SelectionBrush" Value="{DynamicResource SystemAccentColor}" />
     <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThickness}" />    
     <Setter Property="FontSize" Value="{DynamicResource CaptionFontSize}" />
-    <Setter Property="MinHeight" Value="{DynamicResource TextControlThemeMinHeight}" />
+    <Setter Property="MinHeight" Value="{DynamicResource 42}" />
     <Setter Property="MinWidth" Value="{DynamicResource TextControlThemeMinWidth}" />
     <Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
     <Setter Property="FocusAdorner" Value="{x:Null}" />
     <Setter Property="ContextMenu" Value="{StaticResource DefaultTextBoxContextMenu}" />
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
     <Setter Property="Template">
       <ControlTemplate>
         <DataValidationErrors>
@@ -116,26 +123,26 @@
   </Style>
 
   <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
-    <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushPointerOver}"/>
-    <Setter Property="Background" Value="{DynamicResource TextControlBackgroundPointerOver}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerLighterBrush}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
   </Style>
 
   <Style Selector="TextBox:pointerover /template/ TextBlock#PART_Watermark, TextBox:pointerover /template/ TextBlock#PART_FloatingWatermark">
-    <Setter Property="Foreground" Value="{DynamicResource TextControlPlaceholderForegroundPointerOver}" />
+    <Setter Property="Foreground" Value="{DynamicResource SystemTitleTextBrush}" />
   </Style>
 
   <!-- Focused State -->
   <Style Selector="TextBox:focus">
-    <Setter Property="Foreground" Value="{DynamicResource TextControlForegroundFocused}" />
+    <Setter Property="Foreground" Value="{DynamicResource SystemTitleTextBrush}" />
   </Style>
 
   <Style Selector="TextBox:focus /template/ TextBlock#PART_Watermark, TextBox:focus /template/ TextBlock#PART_FloatingWatermark">
-    <Setter Property="Foreground" Value="{DynamicResource TextControlPlaceholderForegroundFocused}" />
+    <Setter Property="Foreground" Value="{DynamicResource SystemIconColor}" />
   </Style>
 
   <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
-    <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}"/>
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentBrush}"/>
     <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThicknessFocused}" />
   </Style>
 
