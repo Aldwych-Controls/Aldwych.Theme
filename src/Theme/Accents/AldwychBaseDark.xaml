@@ -13,6 +13,8 @@
     <!-- Override system shape defaults -->
     <CornerRadius x:Key="MenuCornerRadius">9</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadius">6</CornerRadius>
+    <CornerRadius x:Key="ControlTopOnlyCornerRadius">6,6,0,0</CornerRadius>
+
     <CornerRadius x:Key="OverlayCornerRadius">22</CornerRadius>
     
     <!-- Override system borders -->

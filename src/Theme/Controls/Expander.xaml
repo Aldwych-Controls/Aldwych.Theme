@@ -1,8 +1,8 @@
 <Styles xmlns="https://github.com/avaloniaui">
 
   <Design.PreviewWith>
-    <Border Padding="20" Background="{DynamicResource WindowColor}">
-      <StackPanel>
+    <Border Padding="20"  Width="400" Height="700" Background="{DynamicResource WindowColor}">
+      <StackPanel Spacing="5">
         <Expander Header="Test">
           <Border  Background="Transparent" Height="50" Width="200"/>
         </Expander>
@@ -28,19 +28,25 @@
   <Style Selector="Expander[ExpandDirection=Down]">
     <Setter Property="Template">
       <ControlTemplate>
-        <Border Background="{TemplateBinding Background}">
-          <Grid RowDefinitions="55,*">
+        <Border Name="PART_headerBorder"
+                Background="{DynamicResource SystemContainerBrush}" 
+                BorderBrush="{DynamicResource SystemContainerDarkerBrush}" 
+                BorderThickness="1">
+          
+          <Grid RowDefinitions="50,*" HorizontalAlignment="Stretch">
             <ToggleButton Name="PART_toggle" 
-                          Grid.Row="0" Margin="-5,0,0,0" 
+                          Grid.Row="0" 
+                          Margin="-5,-5,0,15" 
+                          HorizontalAlignment="Stretch"
                           Content="{TemplateBinding Header}"
-                          Foreground="{DynamicResource SystemIconBrush}"                         
-                          FontSize="{DynamicResource Subheading2FontSize}"
-                          FontWeight="{DynamicResource Subheading2FontWeight}"
+                          Foreground="{DynamicResource SystemIconBrush}"                        
+                          FontSize="{DynamicResource HeadingFontSize}"
+                          FontWeight="{DynamicResource HeadingFontWeight}"
                           IsChecked="{TemplateBinding IsExpanded, Mode=TwoWay}" />
 
             <ContentPresenter Name="PART_ContentPresenter"
                               Grid.Row="1"
-                              Background="{DynamicResource SystemContainerBrush}"
+                              Background="{TemplateBinding Background}"
                               IsVisible="{TemplateBinding IsExpanded}"
                               ContentTemplate="{TemplateBinding ContentTemplate}"
                               Content="{TemplateBinding Content}"
@@ -171,6 +177,16 @@
       <RotateTransform Angle="180" />
     </Setter>
     <Setter Property="Fill" Value="{DynamicResource ControlForeground}"/>
+  </Style>
+
+  
+  <Style Selector="Expander[IsExpanded=False] /template/ Border#PART_headerBorder">    
+    <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}"/>
+  </Style>
+
+
+  <Style Selector="Expander[IsExpanded=True] /template/ Border#PART_headerBorder">
+    <Setter Property="CornerRadius" Value="{DynamicResource ControlTopOnlyCornerRadius}"/>
   </Style>
 
   <Style Selector="Expander:up:expanded /template/ ToggleButton#PART_toggle /template/ Path">

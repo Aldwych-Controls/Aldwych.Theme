@@ -35,7 +35,7 @@
     <Setter Property="FocusAdorner" Value="{x:Null}" />
     <Setter Property="MaxDropDownHeight" Value="504" />
     <Setter Property="Foreground" Value="{DynamicResource SystemTitleTextBrush}" />
-    <Setter Property="Background" Value="{DynamicResource SystemControlBrush}" />
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="MinHeight" Value="{DynamicResource TextControlThemeMinHeight}" />
@@ -51,7 +51,7 @@
     <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
     <Setter Property="FontFamily" Value="{DynamicResource ContentControlThemeFontFamily}"/>
     <Setter Property="FontWeight" Value="SemiBold"/>
-    <Setter Property="PlaceholderForeground" Value="{DynamicResource IconGray}" />
+    <Setter Property="PlaceholderForeground" Value="{DynamicResource SystemIconBrush}" />
     <Setter Property="Template">
       <ControlTemplate>
         <DataValidationErrors>
@@ -145,7 +145,7 @@
                    IsLightDismissEnabled="True">
 
               <Border x:Name="PopupBorder"
-                      Background="{DynamicResource SystemControlBrush}"
+                      Background="{DynamicResource SystemContainerBrush}"
                       Margin="0,3,0,-1"
                       HorizontalAlignment="Stretch"
                       ClipToBounds="True"
@@ -189,10 +189,15 @@
 
   <!--  PointerOver State  -->
   <Style Selector="ComboBox:pointerover /template/ Border#Background">
-    <Setter Property="Background" Value="{DynamicResource SystemControlBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource SystemControlLighterBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerLighterBrush}" />
   </Style>
 
+  <Style Selector="ComboBox:pointerover">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource SystemWindowTextBrush}" />
+    <Setter Property="PlaceholderForeground" Value="{DynamicResource SystemTitleTextBrush}"/>
+
+  </Style>
+  
   <!--  Pressed State  -->
   <Style Selector="ComboBox:pressed /template/ Border#Background">
     <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundPressed}" />

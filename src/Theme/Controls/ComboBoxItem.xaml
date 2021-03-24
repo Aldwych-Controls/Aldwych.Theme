@@ -19,8 +19,8 @@
 
   <Style Selector="ComboBoxItem">
     <Setter Property="TextBlock.Foreground" Value="{DynamicResource SystemIconBrush}" />
-    <Setter Property="Background" Value="{DynamicResource SystemControlBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBrush}" />
+    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerBrush}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="FontFamily" Value="{DynamicResource ContentControlThemeFontFamily}" />
     <Setter Property="FontSize" Value="{DynamicResource Body2FontSize}" />
