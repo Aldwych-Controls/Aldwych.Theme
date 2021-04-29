@@ -6,8 +6,9 @@
   <ItemGroup>    
     <AvaloniaResource Include="**/*.xaml" />
     <AvaloniaResource Include="Assets\*" />  
-  </ItemGroup> 
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.0" />
+    <PackageReference Include="Dock.Avalonia" Version="0.10.0" />
   </ItemGroup>  
 </Project>

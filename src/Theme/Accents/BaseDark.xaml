@@ -22,7 +22,7 @@
 
     
     <!-- System Control Colors -->
-    <Color x:Key="WindowColor">#FF161616</Color>
+    <Color x:Key="WindowColor">#000000</Color>
     <Color x:Key="SystemAltLowColor">#33000000</Color>
     
     <Color x:Key="SystemAltMediumColor">#99000000</Color>

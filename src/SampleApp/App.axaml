@@ -3,6 +3,7 @@
              xmlns:local="using:SampleApp"
              xmlns:at="using:Aldwych.Theme"
              x:Class="SampleApp.App">
+  
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>

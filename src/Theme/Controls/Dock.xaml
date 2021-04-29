@@ -1,0 +1,70 @@
+<Styles xmlns="https://github.com/avaloniaui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:idc="clr-namespace:Dock.Avalonia.Controls;assembly=Dock.Avalonia">
+  
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <StackPanel Spacing="20">
+        <Panel Width="300" Height="300">
+          <idc:DockTarget>
+            <idc:DockTarget.Styles>
+              <Style Selector="idc|DockTarget /template/ Panel#PART_TopIndicator">
+                <Setter Property="Opacity" Value="0.0"/>
+              </Style>
+              <Style Selector="idc|DockTarget /template/ Panel#PART_BottomIndicator">
+                <Setter Property="Opacity" Value="0.0"/>
+              </Style>
+              <Style Selector="idc|DockTarget /template/ Panel#PART_LeftIndicator">
+                <Setter Property="Opacity" Value="0.0"/>
+              </Style>
+              <Style Selector="idc|DockTarget /template/ Panel#PART_RightIndicator">
+                <Setter Property="Opacity" Value="0.0"/>
+              </Style>
+              <Style Selector="idc|DockTarget /template/ Panel#PART_CenterIndicator">
+                <Setter Property="Opacity" Value="0.0"/>
+              </Style>
+            </idc:DockTarget.Styles>
+          </idc:DockTarget>
+        </Panel>
+
+      </StackPanel>      
+    </Border>
+    
+  </Design.PreviewWith>
+  
+  <Styles.Resources>
+  </Styles.Resources>
+
+
+  <Style Selector="idc|DockTarget /template/ Image#PART_TopSelector">
+    <Setter Property="Source" Value="avares://Aldwych.Theme/Assets/DockAnchorableTop.png"/>
+    <Setter Property="Width" Value="40"/>
+    <Setter Property="Height" Value="40"/>
+  </Style>
+
+  <Style Selector="idc|DockTarget /template/ Image#PART_BottomSelector">
+    <Setter Property="Source" Value="avares://Aldwych.Theme/Assets/DockAnchorableBottom.png"/>
+    <Setter Property="Width" Value="40"/>
+    <Setter Property="Height" Value="40"/>
+  </Style>
+
+  <Style Selector="idc|DockTarget /template/ Image#PART_LeftSelector">
+    <Setter Property="Source" Value="avares://Aldwych.Theme/Assets/DockAnchorableLeft.png"/>
+    <Setter Property="Width" Value="40"/>
+    <Setter Property="Height" Value="40"/>
+  </Style>
+
+  <Style Selector="idc|DockTarget /template/ Image#PART_RightSelector">
+    <Setter Property="Source" Value="avares://Aldwych.Theme/Assets/DockAnchorableRight.png"/>
+    <Setter Property="Width" Value="40"/>
+    <Setter Property="Height" Value="40"/>
+  </Style>
+
+  <Style Selector="idc|DockTarget /template/ Image#PART_CenterSelector">
+    <Setter Property="Source" Value="avares://Aldwych.Theme/Assets/DockDocumentInside.png"/>
+    <Setter Property="Width" Value="40"/>
+    <Setter Property="Height" Value="40"/>
+  </Style>
+
+
+</Styles>
