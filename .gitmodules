@@ -1,0 +1,3 @@
+[submodule "src/ControlCatalog/XamlControlsGallery"]
+	path = src/ControlCatalog/XamlControlsGallery
+	url = https://github.com/AvaloniaUI/XamlControlsGallery.git

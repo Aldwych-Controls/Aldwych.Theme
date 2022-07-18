@@ -11,24 +11,24 @@
     <Color x:Key="Grayscale_Input">#EFF0F6</Color>
     <Color x:Key="Grayscale_Line">#D9DBE9</Color>
     <Color x:Key="Grayscale_Placeholder">#A0A3BD</Color>
-    <Color x:Key="Grayscale_Label">#6E7191</Color>
-    <Color x:Key="Grayscale_Body">#4E4B66</Color>
-    <Color x:Key="Grayscale_Ash">#262338</Color>
-    <Color x:Key="Grayscale_OffBlack">#14142B</Color>
+    <Color x:Key="Grayscale_Label">#888A95</Color>
+    <Color x:Key="Grayscale_Body">#101116</Color>
+    <Color x:Key="Grayscale_Ash">#171717</Color>
+    <Color x:Key="Grayscale_OffBlack">#121212</Color>
 
     <!-- Primary -->
-    <Color x:Key="Primary_BG">#F7F2FF</Color>
-    <Color x:Key="Primary_Light">#EEE5FE</Color>
-    <Color x:Key="Primary_DarkMode">#C19CFC</Color>
-    <Color x:Key="Primary_Default">#6308F7</Color>
-    <Color x:Key="Primary_Dark">#3C0594</Color>
+    <Color x:Key="Primary_BG">#F2F7FF</Color>
+    <Color x:Key="Primary_Light">#E5F0FF</Color>
+    <Color x:Key="Primary_DarkMode">#9EC5FF</Color>
+    <Color x:Key="Primary_Default">#0066FF</Color>
+    <Color x:Key="Primary_Dark">#033E96</Color>
 
     <!-- Secondary -->
     <Color x:Key="Secondary_Light">#F2F5FF</Color>
     <Color x:Key="Secondary_BG">#E5EBFE</Color>
-    <Color x:Key="Secondary_DarkMode">#9BB2FD</Color>
-    <Color x:Key="Secondary_Default">#063EF9</Color>
-    <Color x:Key="Secondary_Dark">#032596</Color>
+	<Color x:Key="Secondary_DarkMode">#B49DFC</Color>
+    <Color x:Key="Secondary_Default">#7C51FF</Color>
+    <Color x:Key="Secondary_Dark">#270396</Color>
 
     <!-- Success -->
     <Color x:Key="Success_Light">#F2FFF9</Color>
@@ -288,7 +288,7 @@
 
     <FontWeight x:Key="SmallFontWeight">Regular</FontWeight>
     <FontWeight x:Key="CaptionFontWeight">Regular</FontWeight>
-    <FontWeight x:Key="Body2FontWeight">Medium</FontWeight>
+    <FontWeight x:Key="Body2FontWeight">SemiBold</FontWeight>
     <FontWeight x:Key="Body1FontWeight">Regular</FontWeight>    
     <FontWeight x:Key="Subheading2FontWeight">Medium</FontWeight>
     <FontWeight x:Key="Subheading1FontWeight">Regular</FontWeight>

@@ -9,13 +9,12 @@
         <Button IsEnabled="False" Content="Click Me!" />
         <Button Classes="large" Content="Click Me!" />
         <Button Classes="small" Content="Click Me!" />
-
       </StackPanel>      
     </Border>
   </Design.PreviewWith>
   
   <Styles.Resources>
-    <Thickness x:Key="ButtonPadding">15,3,15,3</Thickness>
+    <Thickness x:Key="ButtonPadding">15,5,15,3</Thickness>
 
     <!-- Accent Button -->
     <StaticResource x:Key="AccentButtonBackground" ResourceKey="SystemControlBackgroundAccentBrush" />
@@ -70,9 +69,8 @@
   
   
   <Style Selector="Button">
-    <Setter Property="MinHeight" Value="42" />
+    <Setter Property="MinHeight" Value="45" />
     <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
-    <!--<Setter Property="BackgroundSizing" Value="OuterBorderEdge" />-->
     <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
     <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />
     <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThemeThickness}" />
@@ -94,7 +92,7 @@
                           BorderThickness="{TemplateBinding BorderThickness}"
                           Content="{TemplateBinding Content}"
                           ContentTemplate="{TemplateBinding ContentTemplate}"
-                          Padding="{TemplateBinding Padding}"
+                          Padding="15,0"
                           HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
       </ControlTemplate>
@@ -109,7 +107,7 @@
   </Style>
   
   <Style Selector="Button:pressed  /template/ ContentPresenter#PART_ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPressed}" />
+    <Setter Property="Background" Value="#0F1016" />
     <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPressed}" />
     <Setter Property="TextBlock.Foreground" Value="{DynamicResource ButtonForegroundPressed}" />
   </Style>

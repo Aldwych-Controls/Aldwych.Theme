@@ -55,11 +55,11 @@
     <SolidColorBrush x:Key="SystemControlBrush" Color="{DynamicResource SystemControlColor}" />
 
     <!-- Control Darker -->
-    <Color x:Key="SystemControlDarkerColor">#191A1F</Color>
+    <Color x:Key="SystemControlDarkerColor">#3F4F66</Color>
     <SolidColorBrush x:Key="SystemControlDarkerBrush" Color="{DynamicResource SystemControlDarkerColor}" />
 
     <!-- Container Lighter -->
-    <Color x:Key="SystemContainerLighterColor">#FF16181F</Color>
+    <Color x:Key="SystemContainerLighterColor">#9EC5FF</Color>
     <SolidColorBrush x:Key="SystemContainerLighterBrush" Color="{DynamicResource SystemContainerLighterColor}" />
 
     <!-- Container -->

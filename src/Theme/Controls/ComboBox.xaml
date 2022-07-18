@@ -36,8 +36,8 @@
     <Setter Property="MaxDropDownHeight" Value="504" />
     <Setter Property="Foreground" Value="{DynamicResource SystemTitleTextBrush}" />
     <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
-    <Setter Property="BorderBrush" Value="Transparent" />
-    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="#2b2e3c" />
+	<Setter Property="BorderThickness" Value="1" />
     <Setter Property="MinHeight" Value="{DynamicResource TextControlThemeMinHeight}" />
     <Setter Property="Height" Value="41"/>
     <Setter Property="MinWidth" Value="{DynamicResource TextControlThemeMinWidth}" />
@@ -166,7 +166,7 @@
     </Setter>
   </Style>
 
-  <Style Selector="ComboBox[IsDropDownOpen=true] /template/ Path#DropDownGlyph">
+  <Style Selector="ComboBox[IsDropDownOpen=false] /template/ Path#DropDownGlyph">
     <Setter Property="RenderTransform">
       <RotateTransform Angle="180" />
     </Setter>
@@ -187,15 +187,16 @@
     <Setter Property="Fill" Value="{DynamicResource ComboBoxDropDownGlyphForeground}" />
   </Style>
 
+	
   <!--  PointerOver State  -->
   <Style Selector="ComboBox:pointerover /template/ Border#Background">
-    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerLighterBrush}" />
+    <Setter Property="BorderBrush" Value="#289EC5FF" />
+    <Setter Property="BorderThickness" Value="2" />	 
   </Style>
 
   <Style Selector="ComboBox:pointerover">
     <Setter Property="TextBlock.Foreground" Value="{DynamicResource SystemWindowTextBrush}" />
     <Setter Property="PlaceholderForeground" Value="{DynamicResource SystemTitleTextBrush}"/>
-
   </Style>
   
   <!--  Pressed State  -->

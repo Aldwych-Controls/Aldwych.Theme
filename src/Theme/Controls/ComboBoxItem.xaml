@@ -47,8 +47,8 @@
 
   <!--  PointerOver state  -->
   <Style Selector="ComboBoxItem:pointerover /template/ ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource  SystemControlDarkerBrush}" />
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ControlForeground}" />
+    <Setter Property="Background" Value="{DynamicResource SystemControlDarkerBrush}" />
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource SystemTitleTextBrush}" />
   </Style>
 
 

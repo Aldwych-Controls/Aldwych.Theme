@@ -3,11 +3,9 @@
     <Border Padding="20" Width="500" Height="500">
       <StackPanel Spacing="25">
         <TextBox Text="Sample"
-           Width="300"
            Classes="clearButton"
            TextAlignment="Left"/>
         <TextBox Watermark="Sample test"
-           Width="300"
            Classes="clearButton"
            TextAlignment="Left"/>
         
@@ -28,14 +26,15 @@
   </Styles.Resources>
 
   <Style Selector="TextBox">
-    <Setter Property="Foreground" Value="{DynamicResource TextControlForeground}" />
-    <Setter Property="Background" Value="{DynamicResource SystemContainerBrush}" />
+    <Setter Property="Foreground" Value="#D9DBE9" />
+    <Setter Property="Background" Value="{DynamicResource TextControlBackground}" />
+	<Setter Property="BorderBrush" Value="#2b2e3c" />
     <Setter Property="CaretBrush" Value="{DynamicResource SystemIconColor}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource SystemContainerBrush}" />
     <Setter Property="SelectionBrush" Value="{DynamicResource SystemAccentColor}" />
     <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThickness}" />    
     <Setter Property="FontSize" Value="{DynamicResource CaptionFontSize}" />
-    <Setter Property="MinHeight" Value="{DynamicResource 42}" />
+    <Setter Property="Height" Value="45" />
+	<Setter Property="Width" Value="225" />
     <Setter Property="MinWidth" Value="{DynamicResource TextControlThemeMinWidth}" />
     <Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
     <Setter Property="FocusAdorner" Value="{x:Null}" />

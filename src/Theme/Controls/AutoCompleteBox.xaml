@@ -1,8 +1,8 @@
 <Styles xmlns="https://github.com/avaloniaui" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
-    <Border Padding="20">
-      <AutoCompleteBox Width="200">
+    <Border Padding="20" Background="#16171C">
+      <AutoCompleteBox Watermark="Search">
         <AutoCompleteBox.Items>
           Alabama
           Alaska
@@ -19,14 +19,16 @@
 
   <Style Selector="AutoCompleteBox">
     <Setter Property="VerticalAlignment" Value="Top" />
-    <Setter Property="Foreground" Value="{DynamicResource TextControlForeground}" />
+    <Setter Property="Foreground" Value="#D9DBE9" />
     <Setter Property="Background" Value="{DynamicResource TextControlBackground}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrush}" />
+    <Setter Property="BorderBrush" Value="#2b2e3c" />
     <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThickness}" />    
     <Setter Property="FontSize" Value="{DynamicResource CaptionFontSize}" />
     <Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
     <Setter Property="MaxDropDownHeight" Value="{DynamicResource AutoCompleteListMaxHeight}" />
-    <Setter Property="Template">
+	<Setter Property="Height" Value="45"/>
+	<Setter Property="Width" Value="225"/>
+	  <Setter Property="Template">
       <ControlTemplate>
         <Grid Name="PART_LayoutRoot">
           <TextBox Name="PART_TextBox"

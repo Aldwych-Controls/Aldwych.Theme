@@ -3,7 +3,6 @@
         xmlns:vm="using:SampleApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:idc="clr-namespace:Dock.Avalonia.Controls;assembly=Dock.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="650"
         Width="1000"
         Height="600"
@@ -64,8 +63,7 @@
 
     <TabItem Header="Dock" IsSelected="True">
 
-      <idc:DockControl x:Name="DockControl"                       
-                       Margin="4"/>
+    
       
     </TabItem>
     
